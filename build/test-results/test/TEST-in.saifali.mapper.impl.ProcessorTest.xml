@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="in.saifali.mapper.impl.ProcessorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-03-31T10:59:23" hostname="full023-prt" time="0.201">
+  <properties/>
+  <testcase name="testCustomAnnotation1" classname="in.saifali.mapper.impl.ProcessorTest" time="0.196"/>
+  <testcase name="testCustomAnnotation2" classname="in.saifali.mapper.impl.ProcessorTest" time="0.002"/>
+  <testcase name="testCustomAnnotation3" classname="in.saifali.mapper.impl.ProcessorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
