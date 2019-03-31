@@ -1,7 +1,6 @@
 package in.saifali.mapper.impl;
 
 
-import in.saifali.mapper.Impl.Processor;
 import in.saifali.mapper.helper.TestDTO;
 import in.saifali.mapper.helper.TestModel;
 import org.junit.BeforeClass;

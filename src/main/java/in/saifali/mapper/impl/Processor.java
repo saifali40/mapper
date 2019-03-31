@@ -1,4 +1,4 @@
-package in.saifali.mapper.Impl;
+package in.saifali.mapper.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -14,7 +14,7 @@ public class Processor {
     Map<Object, Object> objectMap = new HashMap<>();
     public <T> T map(Class<T> t, Object object) {
         try {
-            T returnClass = t.newInstance();
+            T returnClass = t.getDeclaredConstructor().newInstance();
             for (Field field : returnClass.getClass().getDeclaredFields()) {
                 field.setAccessible(true);
                 if (field.isAnnotationPresent(FieldMapper.class)) {
