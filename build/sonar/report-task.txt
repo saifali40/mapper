@@ -1,0 +1,7 @@
+organization=saifali40-github
+projectKey=saifali40_mapper
+serverUrl=https://sonarcloud.io
+serverVersion=7.7.0.23020
+dashboardUrl=https://sonarcloud.io/dashboard?id=saifali40_mapper
+ceTaskId=AWnTeWQjS-T8uQm7MgUJ
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWnTeWQjS-T8uQm7MgUJ

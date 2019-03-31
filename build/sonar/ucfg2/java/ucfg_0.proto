@@ -1,0 +1,283 @@
+
+[in.saifali.mapper.impl.Processor#map(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
+__unknown_file ("26*€
+13e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java0 (5Á‰
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java0 (?
+%13java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*"
+ 
+fieldjava.lang.reflect.Field2	getName()*
+12*Å
+24e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (Eç
+ä
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (E
+returnClassT"__id*	
+
+%1T*
+23*ñ
+14e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (∏
+µ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%11java.util.Map"__id*0*."
+ in.saifali.mapper.impl.Processor"
+dtoMapÁ‰
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (.
+%12java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*"
+ 
+fieldjava.lang.reflect.Field2	getName()*
+13*Ç
+25e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (Déã
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (D
+%1T"Pjava.lang.reflect.Constructor#newInstance([Ljava/lang/Object;)Ljava/lang/Object;*%
+#
+%0java.lang.reflect.Constructor2 newInstance([Ljava/lang/Object;)*
+24*∏
+15e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (_ƒ¡
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (_
+%10java.lang.Object"Ijava.util.Map#put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*
+
+%6java.util.Map*
+
+%7java.lang.String*
+
+%9java.lang.String2)put(Ljava/lang/Object;Ljava/lang/Object;)*
+11*¢
+26e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (Æ´
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (6#
+%0java.lang.reflect.Constructor"Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;*
+
+tjava.lang.Class2*getDeclaredConstructor([Ljava/lang/Class;)*
+25*˜
+16e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java0 (^ÉÄ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java0 (^
+%9java.lang.String"Cin.saifali.mapper.annotations.FieldMapper#field()Ljava/lang/String;*1
+/
+%8)in.saifali.mapper.annotations.FieldMapper2field()*
+15*∏
+17e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java0 (5ƒ¡
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java0 (V/
+%8)in.saifali.mapper.annotations.FieldMapper"Yjava.lang.reflect.Field#getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;*"
+ 
+fieldjava.lang.reflect.Field*
+""2 getAnnotation(Ljava/lang/Class;)*
+16*î
+18e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (∑
+¥
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%6java.util.Map"__id*0*."
+ in.saifali.mapper.impl.Processor"
+dtoMapÊ„
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (.
+%7java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*"
+ 
+fieldjava.lang.reflect.Field2	getName()*
+17*ﬂ
+3e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (*"s
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (*
+
+
+%28T*¶
+4e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (.•
+¢
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (.
+jsonjava.lang.String"__id*
+
+%26java.lang.StringΩ
+∫
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%27com.google.gson.Gson"__id*.*,"
+ in.saifali.mapper.impl.Processor"
+gsonÃ…
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java ()
+%28T"Tcom.google.gson.Gson#fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;*
+
+%27com.google.gson.Gson*
+
+jsonjava.lang.String*
+
+tjava.lang.Class2-fromJson(Ljava/lang/String;Ljava/lang/Class;)*
+3*Ü
+5e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (Ω
+∫
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%24com.google.gson.Gson"__id*.*,"
+ in.saifali.mapper.impl.Processor"
+gson∏
+µ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java& (,
+%25java.util.Map"__id*0*."
+ in.saifali.mapper.impl.Processor"
+dtoMapôñ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (-
+%26java.lang.String"Acom.google.gson.Gson#toJson(Ljava/lang/Object;)Ljava/lang/String;*
+
+%24com.google.gson.Gson*
+
+%25java.util.Map2toJson(Ljava/lang/Object;)*
+4*Â
+6e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (ª
+∏
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (1"
+ in.saifali.mapper.impl.Processor"
+	objectMap"__id*
+
+%21java.util.Map∏
+µ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%22java.util.Map"__id*0*."
+ in.saifali.mapper.impl.Processor"
+dtoMap˙˜
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (E
+%23void"7java.util.Map#forEach(Ljava/util/function/BiConsumer;)V*
+
+%22java.util.Map*
+""2(forEach(Ljava/util/function/BiConsumer;)*
+5*‡
+7e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (ÓÎ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%21java.util.Map"[com.google.gson.Gson#fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;*
+
+%15com.google.gson.Gson*
+
+%17java.lang.String*
+
+%20java.lang.reflect.Type24fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)*
+6*¯
+8e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java; (ÜÉ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java; (
+%20java.lang.reflect.Type"Ccom.google.gson.reflect.TypeToken#getType()Ljava/lang/reflect/Type;*+
+)
+%18"in.saifali.mapper.impl.Processor$12	getType()*
+7*˘
+9e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java; (π∂
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java? (a)
+%18"in.saifali.mapper.impl.Processor$1""in.saifali.mapper.impl.Processor$1À
+»
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java; (
+%19"+com.google.gson.reflect.TypeToken#<init>()V*+
+)
+%18"in.saifali.mapper.impl.Processor$1*
+8*ë
+20e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (ôñ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (@
+%5boolean"Jjava.lang.reflect.AccessibleObject#isAnnotationPresent(Ljava/lang/Class;)Z*"
+ 
+fieldjava.lang.reflect.Field*
+""2&isAnnotationPresent(Ljava/lang/Class;)*
+14
+18*”
+21e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (ﬂ‹
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java ()
+
+%4void")java.lang.reflect.Field#setAccessible(Z)V*"
+ 
+fieldjava.lang.reflect.Field*
+""2setAccessible(Z)*
+20*í
+10e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (Ω
+∫
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
+%15com.google.gson.Gson"__id*.*,"
+ in.saifali.mapper.impl.Processor"
+gsonΩ
+∫
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java& (*
+%16com.google.gson.Gson"__id*.*,"
+ in.saifali.mapper.impl.Processor"
+gsonüú
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java& (9
+%17java.lang.String"Acom.google.gson.Gson#toJson(Ljava/lang/Object;)Ljava/lang/String;*
+
+%16com.google.gson.Gson*
+
+objectjava.lang.Object2toJson(Ljava/lang/Object;)*
+9*Ÿ
+22e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (IÂ‚
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (I
+%3$Array"=java.lang.Class#getDeclaredFields()[Ljava/lang/reflect/Field;*
+
+%2java.lang.Class2getDeclaredFields()*
+11*í
+11e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (ö
+ó
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java ( 
+fieldjava.lang.reflect.Field"__id*
+""*
+10
+21*ª
+12e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (@«ƒ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (@
+%14java.lang.Object"Ijava.util.Map#put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*
+
+%11java.util.Map*
+
+%12java.lang.String*
+
+%13java.lang.String2)put(Ljava/lang/Object;Ljava/lang/Object;)*
+11*√
+23e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (*œÃ
+e
+[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (5
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+returnClassT2
+getClass()*
+22:
+tjava.lang.Class:
+objectjava.lang.ObjectB$"
+ in.saifali.mapper.impl.Processor
