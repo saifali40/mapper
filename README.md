@@ -1,5 +1,10 @@
 # mapper
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saifali40_mapper&metric=alert_status)](https://sonarcloud.io/dashboard?id=saifali40_mapper)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=saifali40_mapper)](https://sonarcloud.io/dashboard?id=saifali40_mapper)
+
+
 Light weight mapper for models to DTO without using any constructor or the setters, easily map to new modesl with annotations 
 
 ### Example
