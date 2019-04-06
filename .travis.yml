@@ -13,7 +13,7 @@ script:
     -Dsonar.projectKey=saifali40_mapper \
     -Dsonar.organization=saifali40-github \
     -Dsonar.host.url=https://sonarcloud.io \
-    -Dsonar.login=$SONAR_TOKEN
+    -Dsonar.login=48ba089bae40db8215222586a6241d09bcd5fb8c
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
