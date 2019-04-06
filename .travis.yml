@@ -1,19 +1,13 @@
 language: java
-before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+    - $HOME/.gradle
+before_install:
+  - jdk_switcher use oraclejdk8
+  - java -version
 script:
   - chmod +x gradlew
-  - ./gradlew clean test
-  - ./gradlew sonarqube \
-    -Dsonar.projectKey=saifali40_mapper \
-    -Dsonar.organization=saifali40-github \
-    -Dsonar.host.url=https://sonarcloud.io \
-    -Dsonar.login=$SONAR_TOKEN
+  - ./gradlew sonarqube -Dsonar.projectKey=saifali40_mapper -Dsonar.organization=saifali40-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
