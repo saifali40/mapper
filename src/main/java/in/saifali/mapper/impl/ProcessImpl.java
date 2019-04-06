@@ -15,10 +15,23 @@ public class ProcessImpl  {
     Map<Object, Object> dtoMap = new HashMap<>();
     Map<Object, Object> objectMap = new HashMap<>();
 
+    /**
+     * Using to do forward action where the Model to @Mapper Annotated field
+     * @param object
+     * @param returnClass
+     * @return
+     */
     protected String forwardAction(Object object, Class<? extends Object> returnClass) {
         return mapAction(object, returnClass, true);
     }
 
+    /**
+     *
+     * Using for reverse Mapping where @Mapper Annotated to Model
+     * @param object
+     * @param returnClass
+     * @return
+     */
     protected String reverseAction(Object object, Class<? extends Object> returnClass) {
         return mapAction(object, returnClass, false);
     }
