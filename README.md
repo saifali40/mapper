@@ -1,10 +1,9 @@
 # mapper
-[![Build Status](https://travis-ci.org/saifali40/mapper.svg?branch=master)](https://travis-ci.org/saifali40/mapper)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saifali40_mapper&metric=alert_status)](https://sonarcloud.io/dashboard?id=saifali40_mapper)
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=saifali40_mapper)](https://sonarcloud.io/dashboard?id=saifali40_mapper)
 
+[![Build Status](https://travis-ci.org/saifali40/mapper.svg?branch=master)](https://travis-ci.org/saifali40/mapper)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saifali40_mapper&metric=alert_status)](https://sonarcloud.io/dashboard?id=saifali40_mapper)
 
 Light weight mapper for models to DTO without using any constructor or the setters, easily map to new modesl with annotations 
 
@@ -38,6 +37,14 @@ TestDTO dto = new in.saifali.mapper.Impl.Processor().map(TestDTO.class, model);
 ```
 
 Please follow the test case for more information
+
+#### Note
+
+You can use the same annotation and map dto to model and use the following Method `reverse(Model.class, dto)`
+
+```
+Model model = new in.saifali.mapper.Impl.Processor().reverse(Model.class, dto);
+```
 
 #### Dependency
 [Gson Library](https://mvnrepository.com/artifact/com.google.code.gson/gson)
