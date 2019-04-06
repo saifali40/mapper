@@ -50,5 +50,10 @@ Model model = new in.saifali.mapper.Impl.Processor().reverse(Model.class, dto);
 [Gson Library](https://mvnrepository.com/artifact/com.google.code.gson/gson)
 Which one to convert The Model which is passed.
 
+
+#### API documentation
+[https://saifali40.github.io/mapper/](https://saifali40.github.io/mapper/)
+
 #### License
 See the [LICENSE](https://github.com/saifali40/mapper/blob/master/LICENSE) file for license rights and limitations (Apache).
+
