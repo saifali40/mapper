@@ -11,25 +11,42 @@ Light weight mapper for models to DTO without using any constructor or the sette
 ### Example
 
 ```
+
+public class TestModel{
+    private String field1 = "10";
+    private String field2 = "20";
+    private String field3 = "30";
+    private String field4 = "40";
+    private String field5 = "50";
+}
+
 public class TestDTO {
 
-
     @FieldMapper(field="field1")
-    public String testField1;
+    private String testField1;
 
     @FieldMapper(field="field2")
-    public String testField2;
+    private String testField2;
 
     @FieldMapper(field="field3")
-    public String testField3;
+    private String testField3;
 
     @FieldMapper(field="field4")
-    public Integer testField4;
-
-
-    public Integer field5;
+    private Integer testField4;
+    private Integer field5;
 
 }
+
+```
+Equivalent output will be 
+```
+
+private String testField1 = "10";
+private String testField2 = "20";
+private String testField3 = "30";
+private String testField4 = "40";
+private Integer field5 = "50"
+
 ```
 Mapping use the following helper
 

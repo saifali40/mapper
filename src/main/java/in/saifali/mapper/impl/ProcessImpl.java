@@ -38,10 +38,17 @@ public class ProcessImpl  {
 
     private String mapAction(Object object, Class<? extends Object> returnClass, Boolean isForward) {
 
-        if(isForward)
-            forwardMapping(returnClass);
-        else
-            reverseMapping(returnClass);
+        for (Field field : returnClass.getDeclaredFields()) {
+            field.setAccessible(true);
+            if (field.isAnnotationPresent(FieldMapper.class)) {
+                if (isForward)
+                    forwardMapper(field);
+                else
+                    reverseMapper(field);
+            } else {
+                dtoMap.put(field.getName(), field.getName());
+            }
+        }
 
         objectMap = gson.fromJson(gson.toJson(object), new TypeToken<HashMap<Object, Object>>() {
             private static final long serialVersionUID = 5621227363389228895L;
@@ -50,25 +57,12 @@ public class ProcessImpl  {
         return gson.toJson(dtoMap);
     }
 
-    private void forwardMapping(Class<?> returnClass) {
-        for (Field field : returnClass.getDeclaredFields()) {
-            field.setAccessible(true);
-            if (field.isAnnotationPresent(FieldMapper.class)) {
-                dtoMap.put(field.getName(), field.getAnnotation(FieldMapper.class).field());
-            } else {
-                dtoMap.put(field.getName(), field.getName());
-            }
-        }
+    private void forwardMapper(Field field) {
+        dtoMap.put(field.getName(), field.getAnnotation(FieldMapper.class).field());
     }
-    private void reverseMapping(Class<?> returnClass) {
-        for (Field field : returnClass.getDeclaredFields()) {
-            field.setAccessible(true);
-            if (field.isAnnotationPresent(FieldMapper.class)) {
-                dtoMap.put(field.getAnnotation(FieldMapper.class).field(), field.getName());
-            } else {
-                dtoMap.put(field.getName(), field.getName());
-            }
-        }
+
+    private void reverseMapper(Field field) {
+        dtoMap.put(field.getAnnotation(FieldMapper.class).field(), field.getName());
     }
 
 }
