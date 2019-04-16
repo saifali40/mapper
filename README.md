@@ -17,7 +17,7 @@ public class TestModel{
     private String field2 = "20";
     private String field3 = "30";
     private String field4 = "40";
-    private String field5 = "50";
+    private Integer field5 = 50;
 }
 
 public class TestDTO {
@@ -45,7 +45,7 @@ private String testField1 = "10";
 private String testField2 = "20";
 private String testField3 = "30";
 private String testField4 = "40";
-private Integer field5 = "50"
+private Integer field5 = 50;
 
 ```
 Mapping use the following helper
