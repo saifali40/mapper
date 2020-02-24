@@ -1,6 +1,7 @@
 # mapper
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=saifali40_mapper)](https://sonarcloud.io/dashboard?id=saifali40_mapper)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsaifali40%2Fmapper.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsaifali40%2Fmapper?ref=badge_shield)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://travis-ci.org/saifali40/mapper.svg?branch=master)](https://travis-ci.org/saifali40/mapper)
@@ -75,3 +76,6 @@ Which one to convert The Model which is passed.
 #### License
 See the [LICENSE](https://github.com/saifali40/mapper/blob/master/LICENSE) file for license rights and limitations (Apache).
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsaifali40%2Fmapper.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsaifali40%2Fmapper?ref=badge_large)
