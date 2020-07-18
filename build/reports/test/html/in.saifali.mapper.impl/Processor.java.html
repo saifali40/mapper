@@ -2,19 +2,33 @@
 
 import java.lang.reflect.InvocationTargetException;
 
-<span class="fc" id="L5">public class Processor extends ProcessImpl{</span>
+<span class="fc" id="L5">public class Processor extends ProcessImpl {</span>
 
+  /**
+   * @param t {@link Class} Classname that going to return the object // Basically DTO
+   * @param object ClassObject that going to be mapped to t
+   * @return t
+   * @throws InstantiationException
+   * @throws IllegalAccessException
+   * @throws InvocationTargetException
+   * @throws NoSuchMethodException
+   */
+  public &lt;T&gt; T map(Class&lt;T&gt; t, Object object)
+      throws InstantiationException, IllegalAccessException, InvocationTargetException,
+          NoSuchMethodException {
+<span class="fc" id="L19">    Class&lt;? extends Object&gt; returnClass = t.getDeclaredConstructor().newInstance().getClass();</span>
+<span class="fc" id="L20">    return gson.fromJson(forwardAction(object, returnClass), t);</span>
+  }
 
-    public &lt;T&gt; T map(Class&lt;T&gt; t, Object object)
-            throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L10">        Class&lt;? extends Object&gt; returnClass = t.getDeclaredConstructor().newInstance().getClass();</span>
-<span class="fc" id="L11">        return gson.fromJson(forwardAction(object, returnClass), t);</span>
-    }
-
-    public &lt;T&gt; T reverse(Class&lt;T&gt; t, Object object) {
-<span class="fc" id="L15">        Class&lt;? extends Object&gt; returnClass = object.getClass();</span>
-<span class="fc" id="L16">        return gson.fromJson(reverseAction(object, returnClass), t);</span>
-    }
-
+  /**
+   * @param t {@link Class} Classname that going to return the object // Basically the model
+   * @param object ClassObject that going to be mapped to t // DTO
+   * @param &lt;T&gt;
+   * @return
+   */
+  public &lt;T&gt; T reverse(Class&lt;T&gt; t, Object object) {
+<span class="fc" id="L30">    Class&lt;? extends Object&gt; returnClass = object.getClass();</span>
+<span class="fc" id="L31">    return gson.fromJson(reverseAction(object, returnClass), t);</span>
+  }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

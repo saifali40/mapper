@@ -1,67 +1,0 @@
-
-[in.saifali.mapper.impl.Processor#map(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
-__unknown_file ("1*§
-1e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java
-. 
-(/®«
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java
-. 
-(H#
-%0java.lang.reflect.Constructor"Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;*
-
-tjava.lang.Class2*getDeclaredConstructor([Ljava/lang/Class;)Ž‹
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java
-. 
-(V
-%1T"Pjava.lang.reflect.Constructor#newInstance([Ljava/lang/Object;)Ljava/lang/Object;*%
-#
-%0java.lang.reflect.Constructor2 newInstance([Ljava/lang/Object;)ÆÃ
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java
-. 
-(a
-%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*	
-
-%1T2
-getClass()©
-¦
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java
- 
-(b
-returnClassjava.lang.Class"__id*
-
-%2java.lang.Class¼
-¹
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (
-%3com.google.gson.Gson"__id*.*,"
- in.saifali.mapper.impl.Processor"
-gson…‚
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (?
-%4java.lang.String"gin.saifali.mapper.impl.ProcessImpl#forwardAction(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/String;*$"
- in.saifali.mapper.impl.Processor*
-
-objectjava.lang.Object* 
-
-returnClassjava.lang.Class22forwardAction(Ljava/lang/Object;Ljava/lang/Class;)ÈÅ
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (C
-%5T"Tcom.google.gson.Gson#fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;*
-
-%3com.google.gson.Gson*
-
-%4java.lang.String*
-
-tjava.lang.Class2-fromJson(Ljava/lang/String;Ljava/lang/Class;)"r
-e
-[/Users/saif/workplace/cloudstore/Mapper/src/main/java/in/saifali/mapper/impl/Processor.java (D	
-
-%5T:
-tjava.lang.Class:
-objectjava.lang.ObjectB$"
- in.saifali.mapper.impl.Processor

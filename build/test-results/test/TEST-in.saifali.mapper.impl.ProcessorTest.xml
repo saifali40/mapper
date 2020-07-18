@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="in.saifali.mapper.impl.ProcessorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-04-06T10:29:44" hostname="FULL023-PRT.FULL.Creative" time="0.185">
+<testsuite name="in.saifali.mapper.impl.ProcessorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-07-18T07:29:52" hostname="Admins-MacBook-Pro.local" time="0.182">
   <properties/>
-  <testcase name="testCustomAnnotation1" classname="in.saifali.mapper.impl.ProcessorTest" time="0.174"/>
-  <testcase name="testCustomAnnotation2" classname="in.saifali.mapper.impl.ProcessorTest" time="0.002"/>
-  <testcase name="testCustomAnnotation3" classname="in.saifali.mapper.impl.ProcessorTest" time="0.002"/>
-  <testcase name="testCustomAnnotation1Reverse" classname="in.saifali.mapper.impl.ProcessorTest" time="0.004"/>
+  <testcase name="testCustomAnnotation1" classname="in.saifali.mapper.impl.ProcessorTest" time="0.167"/>
+  <testcase name="testCustomAnnotation2" classname="in.saifali.mapper.impl.ProcessorTest" time="0.003"/>
+  <testcase name="testCustomAnnotation3" classname="in.saifali.mapper.impl.ProcessorTest" time="0.003"/>
+  <testcase name="testCustomAnnotation1Reverse" classname="in.saifali.mapper.impl.ProcessorTest" time="0.009"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,62 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProcessImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Mapper</a> &gt; <a href="index.source.html" class="el_package">in.saifali.mapper.impl</a> &gt; <span class="el_source">ProcessImpl.java</span></div><h1>ProcessImpl.java</h1><pre class="source lang-java linenums">package in.saifali.mapper.impl;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import in.saifali.mapper.annotations.FieldMapper;
-
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-<span class="fc" id="L11">public class ProcessImpl  {</span>
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import in.saifali.mapper.annotations.FieldMapper;
 
+<span class="fc" id="L11">public class ProcessImpl {</span>
 
-<span class="fc" id="L14">    Gson gson = new Gson();</span>
-<span class="fc" id="L15">    Map&lt;Object, Object&gt; dtoMap = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L16">    Map&lt;Object, Object&gt; objectMap = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L13">  Gson gson = new Gson();</span>
+<span class="fc" id="L14">  Map&lt;Object, Object&gt; dtoMap = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L15">  Map&lt;Object, Object&gt; objectMap = new HashMap&lt;&gt;();</span>
 
-    protected String forwardAction(Object object, Class&lt;? extends Object&gt; returnClass) {
-<span class="fc" id="L19">        return mapAction(object, returnClass, true);</span>
+  /**
+   * Using to do forward action where the Model to @Mapper Annotated field
+   *
+   * @param object
+   * @param returnClass
+   * @return
+   */
+  protected String forwardAction(Object object, Class&lt;? extends Object&gt; returnClass) {
+<span class="fc" id="L25">    return mapAction(object, returnClass, true);</span>
+  }
+
+  /**
+   * Using for reverse Mapping where @Mapper Annotated to Model
+   *
+   * @param object
+   * @param returnClass
+   * @return
+   */
+  protected String reverseAction(Object object, Class&lt;? extends Object&gt; returnClass) {
+<span class="fc" id="L36">    return mapAction(object, returnClass, false);</span>
+  }
+
+  private String mapAction(Object object, Class&lt;? extends Object&gt; returnClass, Boolean isForward) {
+
+<span class="fc bfc" id="L41" title="All 2 branches covered.">    for (Field field : returnClass.getDeclaredFields()) {</span>
+<span class="fc" id="L42">      field.setAccessible(true);</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">      if (field.isAnnotationPresent(FieldMapper.class)) {</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (isForward) forwardMapper(field);</span>
+<span class="fc" id="L45">        else reverseMapper(field);</span>
+      } else {
+<span class="fc" id="L47">        dtoMap.put(field.getName(), field.getName());</span>
+      }
     }
 
-    protected String reverseAction(Object object, Class&lt;? extends Object&gt; returnClass) {
-<span class="fc" id="L23">        return mapAction(object, returnClass, false);</span>
-    }
+<span class="fc" id="L51">    objectMap =</span>
+<span class="fc" id="L52">        gson.fromJson(</span>
+<span class="fc" id="L53">            gson.toJson(object),</span>
+<span class="fc" id="L54">            new TypeToken&lt;HashMap&lt;Object, Object&gt;&gt;() {</span>
+              private static final long serialVersionUID = 5621227363389228895L;
+<span class="fc" id="L56">            }.getType());</span>
+<span class="fc" id="L57">    dtoMap.forEach((x, y) -&gt; dtoMap.put(x, objectMap.get(y)));</span>
+<span class="fc" id="L58">    return gson.toJson(dtoMap);</span>
+  }
 
-    private String mapAction(Object object, Class&lt;? extends Object&gt; returnClass, Boolean isForward) {
+  private void forwardMapper(Field field) {
+<span class="fc" id="L62">    dtoMap.put(field.getName(), field.getAnnotation(FieldMapper.class).field());</span>
+<span class="fc" id="L63">  }</span>
 
-<span class="fc bfc" id="L28" title="All 2 branches covered.">        if(isForward)</span>
-<span class="fc" id="L29">            forwardMapping(returnClass);</span>
-        else
-<span class="fc" id="L31">            reverseMapping(returnClass);</span>
-
-<span class="fc" id="L33">        objectMap = gson.fromJson(gson.toJson(object), new TypeToken&lt;HashMap&lt;Object, Object&gt;&gt;() {</span>
-            private static final long serialVersionUID = 5621227363389228895L;
-<span class="fc" id="L35">        }.getType());</span>
-<span class="fc" id="L36">        dtoMap.forEach((x, y) -&gt; dtoMap.put(x, objectMap.get(y)));</span>
-<span class="fc" id="L37">        return gson.toJson(dtoMap);</span>
-    }
-
-    private void forwardMapping(Class&lt;?&gt; returnClass) {
-<span class="fc bfc" id="L41" title="All 2 branches covered.">        for (Field field : returnClass.getDeclaredFields()) {</span>
-<span class="fc" id="L42">            field.setAccessible(true);</span>
-<span class="fc bfc" id="L43" title="All 2 branches covered.">            if (field.isAnnotationPresent(FieldMapper.class)) {</span>
-<span class="fc" id="L44">                dtoMap.put(field.getName(), field.getAnnotation(FieldMapper.class).field());</span>
-            } else {
-<span class="fc" id="L46">                dtoMap.put(field.getName(), field.getName());</span>
-            }
-        }
-<span class="fc" id="L49">    }</span>
-    private void reverseMapping(Class&lt;?&gt; returnClass) {
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (Field field : returnClass.getDeclaredFields()) {</span>
-<span class="fc" id="L52">            field.setAccessible(true);</span>
-<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (field.isAnnotationPresent(FieldMapper.class)) {</span>
-<span class="fc" id="L54">                dtoMap.put(field.getAnnotation(FieldMapper.class).field(), field.getName());</span>
-            } else {
-<span class="fc" id="L56">                dtoMap.put(field.getName(), field.getName());</span>
-            }
-        }
-<span class="fc" id="L59">    }</span>
-
+  private void reverseMapper(Field field) {
+<span class="fc" id="L66">    dtoMap.put(field.getAnnotation(FieldMapper.class).field(), field.getName());</span>
+<span class="fc" id="L67">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
