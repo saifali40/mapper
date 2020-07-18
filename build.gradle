@@ -37,8 +37,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/saifali40/mapper")
             credentials {
-                username = System.getenv("GPR_USER")
-                password = System.getenv("GPR_API_KEY")
+                username = "saifali40"
+                password = "14fad257ab8165206660ef93d45e8430cd0746d4"
             }
         }
     }
