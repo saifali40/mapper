@@ -2,6 +2,9 @@ plugins {
     id 'java'
     id "jacoco"
     id "org.sonarqube" version "2.7"
+    id "com.diffplug.gradle.spotless" version "3.25.0"
+    id 'java-library'
+    id("maven-publish")
 }
 
 group 'io.github.saifali'
@@ -28,4 +31,31 @@ jacocoTestReport {
     }
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/saifali40/mapper")
+            credentials {
+                username = System.getenv("GPR_USER")
+                password = System.getenv("GPR_API_KEY")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+spotless {
+    java {
+        removeUnusedImports()
+        googleJavaFormat()
+        importOrder 'java', 'javax', 'org', 'com'
+    }
+}
+
+compileJava.dependsOn spotlessApply
 test.finalizedBy jacocoTestReport
